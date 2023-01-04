@@ -11,19 +11,48 @@ export class HomeComponent implements OnInit {
 
   public Contact!: FormGroup;
   nombres!:string;
+  correo!:string;
+  mensaje!:string;
+  valido="Todos los datos son validos";
+  error="El mensaje no puede quedar vacio";
+  
+  condicion(nmb:string, cor:string, mns:string){
+    this.nombres=nmb;
+    this.correo=cor;
+    this.mensaje=mns;
 
+    if(this.nombres=nmb){
+      this.valido
+    }
+  
+  }
+  
   constructor(private formBuilder:FormBuilder){
 
   }
   ngOnInit(): void {
     this.Contact = this.formBuilder.group({
-      name:['', 
+      firstname:['', 
+        [
+          Validators.required,
+          Validators.minLength(10)
+        ]
+      ],
+      email:['', 
         [
           Validators.required,
           Validators.email
+        ]
+      ],
+      message:['', 
+        [
+          Validators.required,
+          Validators.maxLength(500)
         ]
       ]
     })
 
   }
 }
+
+

@@ -1,14 +1,37 @@
 <div class="bg-black text-white p-8 mt-10 w-3/4 mx-auto">
     <h1 class="text-center">Formulario Contact</h1>
     
-    <div class="w-40 text-left">
+    <div class="mx-auto w-40 text-left">
         <form [formGroup]="Contact">  
             <!-- input nombres -->
+             <div class="my-5 p-3">
+                <label for="firstname">Nombres</label>
+                <input type="text" id="firstname" formControlName="firstname" class="py-1 px-3 text-black rounded">
+            </div>
+
+            <!-- input email -->
             <div class="my-5 p-3">
-                <label for="nombres">Nombres</label>
-                <input type="text" id="name" formControlName="name" class="py-1 px-3 rounded" [(ngModel)]="nombres">
+                <label for="email">Email</label>
+                <input type="text" id="email" formControlName="email" class="py-1 px-3 text-black rounded">
+            </div>
+
+
+            <!-- textarea mensaje -->
+            <div class="my-5 p-3">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="message" formControlName="message" cols="30" rows="10" class="py-1 px-3 text-black rounded"></textarea>
+            </div>
+
+           
+
+            <div class="text-center">
+                <button type="submit" class="bg-blue-300 pl-3 pr-3 pt-2 pb-2 rounded">Confirmar</button>
             </div>
     
+            <p *ngIf="valido; else erroneo" class="text-white"></p>
+            <ng-template #erroneo>
+                <p>{{error}}</p>
+            </ng-template>
         </form>
 
     </div>
