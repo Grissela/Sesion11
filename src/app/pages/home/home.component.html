@@ -1,0 +1,16 @@
+<div class="bg-black text-white p-8 mt-10 w-3/4 mx-auto">
+    <h1 class="text-center">Formulario Contact</h1>
+    
+    <div class="w-40 text-left">
+        <form [formGroup]="Contact">  
+            <!-- input email -->
+            <div class="my-5 p-3">
+                <label for="nombres">Nombres</label>
+                <input type="text" id="name" formControlName="name" class="py-1 px-3 rounded" [(ngModel)]="nombres">
+            </div>
+    
+        </form>
+
+    </div>
+    
+</div>
