@@ -1,24 +1,25 @@
-<div class="bg-black text-white p-8 mt-10 w-3/4 mx-auto">
-    <h1 class="text-center">Formulario Contact</h1>
+<div class="bg-emerald-300 text-black mt-10 w-1/4 mx-auto">
+    <h1 class="text-center bg-gradient-to-r from-cyan-500 to-blue-500
+    p-4 font-semibold text-xl text-white">Formulario Contact</h1>
     
-    <div class="mx-auto w-40 text-left">
+    <div class="mx-auto  text-center">
         <form [formGroup]="Contact">  
             <!-- input nombres -->
              <div class="my-5 p-3">
-                <label for="firstname">Nombres</label>
+                <label for="firstname" class="block pb-2">Nombres </label>
                 <input type="text" id="firstname" formControlName="firstname" class="py-1 px-3 text-black rounded">
             </div>
 
             <!-- input email -->
             <div class="my-5 p-3">
-                <label for="email">Email</label>
+                <label for="email" class="block pb-2">Email </label>
                 <input type="text" id="email" formControlName="email" class="py-1 px-3 text-black rounded">
             </div>
 
 
             <!-- textarea mensaje -->
             <div class="my-5 p-3">
-                <label for="mensaje">Mensaje</label>
+                <label for="mensaje" class="block pb-2">Mensaje </label>
                 <textarea id="message" formControlName="message" cols="30" rows="10" class="py-1 px-3 text-black rounded"></textarea>
             </div>
 

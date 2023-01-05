@@ -16,16 +16,16 @@ export class HomeComponent implements OnInit {
   valido="Todos los datos son validos";
   error="El mensaje no puede quedar vacio";
   
-  condicion(nmb:string, cor:string, mns:string){
-    this.nombres=nmb;
-    this.correo=cor;
-    this.mensaje=mns;
+  // condicion(nmb:string, cor:string, mns:string){
+  //   this.nombres=nmb;
+  //   this.correo=cor;
+  //   this.mensaje=mns;
 
-    if(this.nombres=nmb){
-      this.valido
-    }
+  //   if(this.nombres=nmb){
+  //     this.valido
+  //   }
   
-  }
+  // }
   
   constructor(private formBuilder:FormBuilder){
 
