@@ -15,17 +15,19 @@ export class HomeComponent implements OnInit {
   mensaje!:string;
   valido="Todos los datos son validos";
   error="El mensaje no puede quedar vacio";
+  resultado!:string;
+  // public formLogin!:FormGroup;
   
-  // condicion(nmb:string, cor:string, mns:string){
-  //   this.nombres=nmb;
-  //   this.correo=cor;
-  //   this.mensaje=mns;
+  // // condicion(nmb:string, cor:string, mns:string){
+  // //   this.nombres=nmb;
+  // //   this.correo=cor;
+  // //   this.mensaje=mns;
 
-  //   if(this.nombres=nmb){
-  //     this.valido
-  //   }
+  // //   if(this.nombres=nmb){
+  // //     this.valido
+  // //   }
   
-  // }
+  // // }
   
   constructor(private formBuilder:FormBuilder){
 
@@ -51,7 +53,12 @@ export class HomeComponent implements OnInit {
         ]
       ]
     })
-
+    }
+    send():any{
+      if(this.Contact.valid)
+      this.resultado="Todos los datos son validos";
+      else
+      this.resultado="Hay datos invalidos en el formulario";
   }
 }
 
